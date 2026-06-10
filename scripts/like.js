@@ -2,10 +2,8 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-Если эти классы поменять в HTML, скрипт перестанет работать. Будьте аккуратны.
 */
 
 const likeHeartArray = document.querySelectorAll('.like-icon');
@@ -13,12 +11,15 @@ const likeButtonArray = document.querySelectorAll('.card__like-button');
 const iconButtonArray = document.querySelectorAll('.card__icon-button');
 
 iconButtonArray.forEach((iconButton, index) => {
-  iconButton.onclick = () =>
+  iconButton.addEventListener('click', () => {
     toggleIsLiked(likeHeartArray[index], likeButtonArray[index]);
+  });
 });
 
 likeButtonArray.forEach((button, index) => {
-  button.onclick = () => toggleIsLiked(likeHeartArray[index], button);
+  button.addEventListener('click', () => {
+    toggleIsLiked(likeHeartArray[index], button);
+  });
 });
 
 function toggleIsLiked(heart, button) {
@@ -27,15 +28,29 @@ function toggleIsLiked(heart, button) {
 }
 
 function setButtonText(heart, button) {
-  if ([...heart.classList].includes('is-liked')) {
-    setTimeout(
-      () => (button.querySelector('.button__text').textContent = 'Unlike'),
-      500
-    );
+  const buttonText = button.querySelector('.button__text');
+
+  if (heart.classList.contains('is-liked')) {
+    setTimeout(() => {
+      buttonText.textContent = 'Unlike';
+    }, 500);
   } else {
-    setTimeout(
-      () => (button.querySelector('.button__text').textContent = 'Like'),
-      500
-    );
+    setTimeout(() => {
+      buttonText.textContent = 'Like';
+    }, 500);
   }
 }
+
+const memoryDialog = document.querySelector('#memory-dialog');
+const saveButton = document.querySelector('.save-button');
+const dialogButton = document.querySelector('.dialog__button');
+
+saveButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  memoryDialog.showModal();
+});
+
+dialogButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  memoryDialog.close();
+});

@@ -180,33 +180,29 @@
       </article>
     </section>
 
-       <button
-      class="button save-button section-width"
-      type="button"
-      onclick="document.querySelector('#memory-dialog').showModal()"
-      aria-controls="memory-dialog"
-    >
-      <svg class="floppy save-button__icon" aria-hidden="true">
-        <use href="#floppy-icon"></use>
-      </svg>
-      <span class="button__text">Сохранить на память</span>
-    </button>
-  </main>
+<button
+  class="button save-button section-width"
+  type="button"
+  aria-controls="memory-dialog"
+>
+  <svg class="floppy save-button__icon" aria-hidden="true">
+    <use href="#floppy-icon"></use>
+  </svg>
+  <span class="button__text">Сохранить на память</span>
+</button>
+</main>
 
-  <dialog class="dialog" id="memory-dialog">
-    <svg class="floppy dialog__icon" aria-hidden="true">
-      <use href="#floppy-icon"></use>
-    </svg>
+<dialog class="dialog" id="memory-dialog">
+  <svg class="floppy dialog__icon" aria-hidden="true">
+    <use href="#floppy-icon"></use>
+  </svg>
 
-    <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+  <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
 
-    <button
-      class="button dialog__button"
-      type="button"
-      onclick="document.querySelector('#memory-dialog').close()"
-    >
-      <span class="button__text">OK</span>
-    </button>
-  </dialog>
-</body>
-</html>
+  <button
+    class="button dialog__button"
+    type="button"
+  >
+    <span class="button__text">OK</span>
+  </button>
+</dialog>
