@@ -13,4 +13,22 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  color: var(--accent-color);
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: 'wght' var(--main-font-weight);
+  background-color: var(--background-color);
+  background-image: var(--page-background);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.section-width {
+  inline-size: var(--content-width);
+  margin-inline: auto;
+}
+
+@media (width <= 375px) {
+  .section-width {
+    inline-size: 100%;
+  }
 }
