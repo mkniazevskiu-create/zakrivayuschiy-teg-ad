@@ -298,11 +298,8 @@
   text-transform: uppercase;
 }
 
-.dialog__form {
-  grid-column: 1 / -1;
-}
-
 .dialog__button {
+  grid-column: 1 / -1;
   inline-size: 100%;
   margin-block-start: 30px;
   text-transform: uppercase;
