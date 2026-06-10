@@ -13,7 +13,7 @@
   --contour-color: #000000;
   --animation-fill-color: #ff0000;
 
-  --content-width: clamp(375px, 100%, 700px);
+  --content-width: clamp(375px, 50vw, 700px);
   --page-background:
     repeating-linear-gradient(
       90deg,
