@@ -1,1 +1,1 @@
-https://mkniazevskiu-create.github.io/zakrivayuschiy-teg-ad/
+https://github.com/mkniazevskiu-create/zakrivayuschiy-teg-ad
