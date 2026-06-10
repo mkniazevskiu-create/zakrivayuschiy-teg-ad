@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./styles/style.css" />
   <link rel="stylesheet" href="./styles/animations.css" />
   <script src="./scripts/like.js" defer></script>
+  <script src="./scripts/dialog.js" defer></script>
 </head>
 <body class="page">
   <svg class="visually-hidden" aria-hidden="true">
@@ -180,29 +181,31 @@
       </article>
     </section>
 
-<button
-  class="button save-button section-width"
-  type="button"
-  aria-controls="memory-dialog"
->
-  <svg class="floppy save-button__icon" aria-hidden="true">
-    <use href="#floppy-icon"></use>
-  </svg>
-  <span class="button__text">Сохранить на память</span>
-</button>
-</main>
+    <button
+      class="button save-button section-width"
+      type="button"
+      aria-controls="memory-dialog"
+    >
+      <svg class="floppy save-button__icon" aria-hidden="true">
+        <use href="#floppy-icon"></use>
+      </svg>
+      <span class="button__text">Сохранить на память</span>
+    </button>
+  </main>
 
-<dialog class="dialog" id="memory-dialog">
-  <svg class="floppy dialog__icon" aria-hidden="true">
-    <use href="#floppy-icon"></use>
-  </svg>
+  <dialog class="dialog" id="memory-dialog">
+    <svg class="floppy dialog__icon" aria-hidden="true">
+      <use href="#floppy-icon"></use>
+    </svg>
 
-  <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+    <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
 
-  <button
-    class="button dialog__button"
-    type="button"
-  >
-    <span class="button__text">OK</span>
-  </button>
-</dialog>
+    <button
+      class="button dialog__button"
+      type="button"
+    >
+      <span class="button__text">OK</span>
+    </button>
+  </dialog>
+</body>
+</html>
